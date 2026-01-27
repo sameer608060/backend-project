@@ -1,6 +1,7 @@
 //require ('dotenv').config({path: './env'});
 import dns from "dns";
 dns.setServers(["1.1.1.1", "8.8.8.8"]);
+import { app } from "./app.js"
 
 import dotenv from "dotenv"
 
@@ -10,6 +11,9 @@ import connectDB from "./db/index.js"
 dotenv.config({
     path: './env'
 });
+
+
+
 
 
 
@@ -24,6 +28,8 @@ connectDB()
 .catch((err)=>{
     console.log("MONGO db connection failed !!!", err)
 })
+
+
 
 
 
